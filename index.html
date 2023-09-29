@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+
+    <style>
+        .custom-alert {
+            /* display: none; */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .custom-alert-content {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        #customAlert button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="forConnetion">
+        <button id="host">
+            host
+        </button>
+        <button id="guest">
+            guest
+        </button>
+
+        <div id="customAlert" class="custom-alert">
+            <div class="custom-alert-content">
+                <textarea type="text" name="copy" id="copy"></textarea>
+                <button id="closeAlert" type="button">OK</button>
+            </div>
+        </div>
+    </div>
+    <div id="play" style="display: none;">
+        <h1>Example</h1>
+        <ul id="messages"></ul>
+        <div id="messageInput" style="width: 80%;padding: 3%;margin: 3%; font-size: large; user-select: none;"></div>
+        <br>
+        <textarea type="text" name="inputText" id="inputText" style="width: 50%;" spellcheck="false"></textarea>
+        <button type="button" id="ready">Ready</button>
+        <button type="button" id="start_button">New Game</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
