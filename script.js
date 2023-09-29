@@ -404,7 +404,8 @@ const sampleWords = new Set([
 
 const WebRTCConnection = class {
     constructor(swapDisplay, bothPlayData, updateRange, arrayToStoreWords) {
-        this.peerConncetion = new RTCPeerConnection();
+        const configuration = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
+        this.peerConnection = new RTCPeerConnection(configuration);
         this.role = null;
         this.Ichannel = null;
         this.swapDisplay = swapDisplay;
