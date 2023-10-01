@@ -443,7 +443,9 @@ const WebRTCConnection = class {
         this.role = 'host';
         let resolveNow = null;
         this.peerConncetion.onicecandidate = e => {
-            resolveNow();
+            console.log(this.peerConncetion.iceGatheringState);
+            if(this.peerConncetion.iceGatheringState == 'complete')
+                resolveNow();
         }
         this.Ichannel = this.peerConncetion.createDataChannel('channel')
         this.addListenersForChannel();
@@ -462,6 +464,8 @@ const WebRTCConnection = class {
         this.role = 'guest';
         let resolveNow = null;
         this.peerConncetion.onicecandidate = async () => {
+            console.log(this.peerConncetion.iceGatheringState);
+            if(this.peerConncetion.iceGatheringState == 'complete')
             resolveNow();
         }
         this.peerConncetion.ondatachannel = ({ channel }) => {
