@@ -34,22 +34,22 @@
 </head>
 
 <body>
-    <div id="forConnetion">
-        <button id="host">
+    <div id="forConnetion" style="float: right;">
+        <button type="button" id="host">
             host
         </button>
-        <button id="guest">
+        <button type="button" id="guest">
             guest
         </button>
 
-        <div id="customAlert" class="custom-alert">
+        <div id="customAlert" class="custom-alert" style="display: none;">
             <div class="custom-alert-content">
                 <textarea type="text" name="copy" id="copy"></textarea>
                 <button id="closeAlert" type="button">OK</button>
             </div>
         </div>
     </div>
-    <div id="play" style="display: none;">
+    <div id="play" style="display: block;">
         <h1>Example</h1>
         <ul id="messages"></ul>
         <div id="messageInput" style="width: 80%;padding: 3%;margin: 3%; font-size: large; user-select: none;"></div>
