@@ -680,6 +680,7 @@ const WebRTCConnection = class {
         this.role = 'host';
         let resolveNow = null;
         this.peerConncetion.onicecandidate = e => {
+            console.log(this.peerConncetion.iceGatheringState);
             if (this.peerConncetion.iceGatheringState == 'complete')
                 resolveNow();
         }
